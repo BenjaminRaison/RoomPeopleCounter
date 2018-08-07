@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <span>{{roomInfo.roomId}}</span>
+      <span> - </span>
+      <span>{{roomInfo.data[0].count}} People</span>
+    </mat-card-title>
+    <mat-card-subtitle>{{toTime(roomInfo.data[0].timestamp)}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <canvas baseChart
+            [chartType]="'line'"
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels">
+    </canvas>
+
+  </mat-card-content>
+</mat-card>

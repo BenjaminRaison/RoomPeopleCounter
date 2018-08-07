@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$logbook-primary: mat-palette($mat-indigo);
+$logbook-accent: mat-palette($mat-pink, A200, A100, A400);
+$logbook-theme: mat-light-theme($logbook-primary, $logbook-accent);
+
+@include angular-material-theme($logbook-theme);

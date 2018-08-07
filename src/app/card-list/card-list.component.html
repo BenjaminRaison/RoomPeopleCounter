@@ -1,0 +1,6 @@
+<mat-toolbar color="primary">
+  <h1>Room People Counter</h1>
+</mat-toolbar>
+<div class="flex">
+  <app-room-card *ngFor="let info of data" [roomInfo]="info"></app-room-card>
+</div>
