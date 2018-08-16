@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <a mat-icon-button routerLink="list">
+    <mat-icon>arrow_back</mat-icon>
+  </a>
+  <h1>{{roomInfo.roomId}}</h1>
+</mat-toolbar>
+<div class="filter">
+  <mat-form-field>
+    <input matInput type="time" placeholder="From" name="from" value="{{fromString}}"
+           (input)="onFromChange($event.target.value)">
+    <mat-icon matSuffix>access_time</mat-icon>
+  </mat-form-field>
+  <span class="align-right"></span>
+  <mat-form-field>
+    <input matInput type="time" placeholder="To" name="to" value="{{toString}}"
+           (input)="onToChange($event.target.value)">
+    <mat-icon matSuffix>access_time</mat-icon>
+  </mat-form-field>
+</div>
+<div class="parent">
+  <div class="container" *ngIf="lineChartData !== null && lineChartData !== undefined">
+    <canvas baseChart
+            [chartType]="'line'"
+            [labels]="lineChartLabels"
+            [datasets]="lineChartData">
+    </canvas>
+  </div>
+</div>

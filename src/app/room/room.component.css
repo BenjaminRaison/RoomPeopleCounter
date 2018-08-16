@@ -1,0 +1,25 @@
+.filter {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+mat-form-field {
+  margin: 5px;
+}
+
+.align-right {
+  flex: 1 0 0;
+}
+
+@media screen and (min-width: 1380px) {
+  .parent {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

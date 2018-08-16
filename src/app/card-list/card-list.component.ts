@@ -17,7 +17,7 @@ export class CardListComponent implements OnInit {
   }
 
   ngOnInit() {
-    interval(7000)
+    interval(30000)
       .pipe(
         startWith(0),
         switchMap(() => this.service.getLatest())

@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {RoomService} from "../service/room.service";
 import {RoomInfo} from "../model";
 
 @Component({
@@ -14,11 +13,9 @@ export class RoomCardComponent implements OnInit {
 
   public lineChartData: Array<any>;
   public lineChartLabels: Array<string> = [];
-  lineChartColours: Array<any> = [
-    {}
-  ];
 
-  constructor(private service: RoomService) {
+
+  constructor() {
   }
 
   ngOnInit() {

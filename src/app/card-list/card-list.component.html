@@ -2,5 +2,7 @@
   <h1>Room People Counter</h1>
 </mat-toolbar>
 <div class="flex">
-  <app-room-card *ngFor="let info of data" [roomInfo]="info"></app-room-card>
+  <a *ngFor="let info of data" routerLink="/room/{{info.roomId}}">
+    <app-room-card [roomInfo]="info"></app-room-card>
+  </a>
 </div>
